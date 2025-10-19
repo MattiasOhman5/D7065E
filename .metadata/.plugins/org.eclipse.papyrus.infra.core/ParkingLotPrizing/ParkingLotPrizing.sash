@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecture="http://www.eclipse.org/papyrus/infra/core/architecture" xmlns:di="http://www.eclipse.org/papyrus/0.7.0/sashdi">
+  <di:SashWindowsMngr>
+    <sashModel currentSelection="/0/@sashModel/@windows.0/@children.0" restoreActivePage="true">
+      <windows>
+        <children xsi:type="di:TabFolder" currentSelection="/0/@sashModel/@windows.0/@children.0/@children.4">
+          <children>
+            <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_aed1EI_jEfCHJ7DUwa6s9Q"/>
+          </children>
+          <children>
+            <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_CytXkJRbEfCeI66-oErBbA"/>
+          </children>
+          <children>
+            <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_0P2iIJnsEfCUlb2OTotcLA"/>
+          </children>
+          <children>
+            <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_Zv02cJ0VEfCOCKuyadxJtA"/>
+          </children>
+          <children>
+            <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_vzh-MJ0VEfCOCKuyadxJtA"/>
+          </children>
+          <children>
+            <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_ACuwsJ0WEfCOCKuyadxJtA"/>
+          </children>
+          <children>
+            <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_hSUiEJ0WEfCOCKuyadxJtA"/>
+          </children>
+          <children>
+            <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_JWxNgJ77EfCOCKuyadxJtA"/>
+          </children>
+          <children>
+            <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_zXqJYJRbEfCeI66-oErBbA"/>
+          </children>
+          <children>
+            <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_9cu78JRbEfCeI66-oErBbA"/>
+          </children>
+        </children>
+      </windows>
+    </sashModel>
+  </di:SashWindowsMngr>
+  <architecture:ArchitectureDescriptionPreferences>
+    <viewpointIds>arrowhead.vp</viewpointIds>
+  </architecture:ArchitectureDescriptionPreferences>
+</xmi:XMI>

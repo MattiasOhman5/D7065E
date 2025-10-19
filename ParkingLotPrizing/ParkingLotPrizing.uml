@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ArrowheadDSL="http://www.eclipse.org/papyrus/arrowhead" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks">
+  <uml:Model xmi:id="_aZ3o8I_jEfCHJ7DUwa6s9Q" name="ParkingLotPrizing">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_acKvAI_jEfCHJ7DUwa6s9Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_acRcsI_jEfCHJ7DUwa6s9Q">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_acxzAI_jEfCHJ7DUwa6s9Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_LdWEYCTQEe-9KvpFZizseA"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KaUyQJDDEfCHJ7DUwa6s9Q" name="ParkingSensor">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_zSRc4JPIEfCX89xZkn_KBA" name="sensorData" visibility="public" type="_GxqVIJPGEfCX89xZkn_KBA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_6Wnz8JPJEfCX89xZkn_KBA" name="serviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_hiPKcJ7kEfCOCKuyadxJtA" name="serviceOrchestration" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_e_uoECcDEe-kO5sLBQPK1Q"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_qWk4cJ7lEfCOCKuyadxJtA" name="identity" visibility="public" aggregation="composite" isConjugated="true">
+        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_dE6HsDMYEe-MpZcrQa1Yrg"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GxqVIJPGEfCX89xZkn_KBA" name="sensorData">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_K_9FEJPHEfCX89xZkn_KBA" name="availability">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ahJiEJPHEfCX89xZkn_KBA" name="availability"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ANKbcJPIEfCX89xZkn_KBA" name="sensorDataHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_JOIssJPIEfCX89xZkn_KBA" general="_GxqVIJPGEfCX89xZkn_KBA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VQxYIJPIEfCX89xZkn_KBA" name="IDD_Implementation18">
+      <generalization xmi:type="uml:Generalization" xmi:id="_YIw48JPIEfCX89xZkn_KBA" general="_ANKbcJPIEfCX89xZkn_KBA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_scuaAJPLEfCX89xZkn_KBA" name="ParkingSensor">
+      <generalization xmi:type="uml:Generalization" xmi:id="_vNYjwJPLEfCX89xZkn_KBA" general="_KaUyQJDDEfCHJ7DUwa6s9Q"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_KROBIJ0aEfCOCKuyadxJtA" name="sensorDataHTTP" visibility="public" type="_ANKbcJPIEfCX89xZkn_KBA" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9fte0JRYEfCeI66-oErBbA" name="Block24"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_D7ngYJRbEfCeI66-oErBbA" name="Occupancy">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_S7RN8JnqEfCUlb2OTotcLA" name="occupancyData" visibility="public" type="_EtuSwJRbEfCeI66-oErBbA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_fTNbAJnqEfCUlb2OTotcLA" name="sensorData" visibility="protected" type="_GxqVIJPGEfCX89xZkn_KBA" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EtuSwJRbEfCeI66-oErBbA" name="occupanyData"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LH79IJRbEfCeI66-oErBbA" name="Occupancy">
+      <generalization xmi:type="uml:Generalization" xmi:id="_lpqgYJxTEfCOCKuyadxJtA" general="_D7ngYJRbEfCeI66-oErBbA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_fwKO8J0aEfCOCKuyadxJtA" name="occupancyDataHTTP" visibility="public" type="_V3MVIJRbEfCeI66-oErBbA" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_V3MVIJRbEfCeI66-oErBbA" name="occupancyDataHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_h-ufsJxTEfCOCKuyadxJtA" general="_EtuSwJRbEfCeI66-oErBbA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WhJREJRbEfCeI66-oErBbA" name="IDD_Implementation29">
+      <generalization xmi:type="uml:Generalization" xmi:id="_j8U00JxTEfCOCKuyadxJtA" general="_V3MVIJRbEfCeI66-oErBbA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_u-7OkJRbEfCeI66-oErBbA" name="LocalCloud">
+      <packagedElement xmi:type="uml:Class" xmi:id="_26IKkJRbEfCeI66-oErBbA" name="ParkingLotCloud">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="__Sk4cJ69EfCOCKuyadxJtA" name="Property1" type="_KaUyQJDDEfCHJ7DUwa6s9Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_JiHOkJ6-EfCOCKuyadxJtA" name="Property2" type="_KaUyQJDDEfCHJ7DUwa6s9Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_PLLv4J6-EfCOCKuyadxJtA" name="Property3" type="_KaUyQJDDEfCHJ7DUwa6s9Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_WI8MMJ6-EfCOCKuyadxJtA" name="Property4" type="_D7ngYJRbEfCeI66-oErBbA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5tMu4J6-EfCOCKuyadxJtA" name="Property8" type="_A5A4cJ0WEfCOCKuyadxJtA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Exx2oJ6_EfCOCKuyadxJtA" name="Property9" type="_ampJsJ0VEfCOCKuyadxJtA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TAwd0J6_EfCOCKuyadxJtA" name="Property10" type="_2TmikJnsEfCUlb2OTotcLA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_giF74J6_EfCOCKuyadxJtA" name="Property11" type="_xdXCwJ0VEfCOCKuyadxJtA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4SZIUJ6_EfCOCKuyadxJtA" name="Property16" type="_knSSwJ0WEfCOCKuyadxJtA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_sVRAQJ7FEfCOCKuyadxJtA" name="serviceRegister_Design">
+          <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_30sNUCTQEe-9KvpFZizseA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_BbQikJ7GEfCOCKuyadxJtA" name="serviceOrchestration-Design">
+          <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_AQzcoCcDEe-kO5sLBQPK1Q"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LpMnIJ7PEfCOCKuyadxJtA" name="authentication-Design" aggregation="composite">
+          <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_TzZgEDMYEe-MpZcrQa1Yrg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aqNIMJ7PEfCOCKuyadxJtA" name="consumptionAuthorisation-Design">
+          <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbCnJiclEe-kO5sLBQPK1Q"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_r38tIJ78EfCOCKuyadxJtA" name="Property28" type="_KCMJEJ77EfCOCKuyadxJtA"/>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_ngkmYJ6-EfCOCKuyadxJtA" name="Connector5">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_ngsiMJ6-EfCOCKuyadxJtA" partWithPort="__Sk4cJ69EfCOCKuyadxJtA" role="_zSRc4JPIEfCX89xZkn_KBA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_ngtJQJ6-EfCOCKuyadxJtA" partWithPort="_WI8MMJ6-EfCOCKuyadxJtA" role="_fTNbAJnqEfCUlb2OTotcLA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_ojLS4J6-EfCOCKuyadxJtA" name="Connector6">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_ojMhAJ6-EfCOCKuyadxJtA" partWithPort="_JiHOkJ6-EfCOCKuyadxJtA" role="_zSRc4JPIEfCX89xZkn_KBA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_ojMhAZ6-EfCOCKuyadxJtA" partWithPort="_WI8MMJ6-EfCOCKuyadxJtA" role="_fTNbAJnqEfCUlb2OTotcLA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_pfrXYJ6-EfCOCKuyadxJtA" name="Connector7">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_pfr-cJ6-EfCOCKuyadxJtA" partWithPort="_PLLv4J6-EfCOCKuyadxJtA" role="_zSRc4JPIEfCX89xZkn_KBA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_pfr-cZ6-EfCOCKuyadxJtA" partWithPort="_WI8MMJ6-EfCOCKuyadxJtA" role="_fTNbAJnqEfCUlb2OTotcLA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_k_LyQJ6_EfCOCKuyadxJtA" name="Connector12">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_k_MZUJ6_EfCOCKuyadxJtA" partWithPort="_WI8MMJ6-EfCOCKuyadxJtA" role="_S7RN8JnqEfCUlb2OTotcLA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_k_MZUZ6_EfCOCKuyadxJtA" partWithPort="_5tMu4J6-EfCOCKuyadxJtA" role="_w0fnwJ0cEfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_mXkhgJ6_EfCOCKuyadxJtA" name="Connector13">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_mXlIkJ6_EfCOCKuyadxJtA" partWithPort="_Exx2oJ6_EfCOCKuyadxJtA" role="_9g2QgJ0aEfCOCKuyadxJtA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_mXlIkZ6_EfCOCKuyadxJtA" partWithPort="_5tMu4J6-EfCOCKuyadxJtA" role="_53wYAJ0cEfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_nl25kJ6_EfCOCKuyadxJtA" name="Connector14">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_nl25kZ6_EfCOCKuyadxJtA" partWithPort="_TAwd0J6_EfCOCKuyadxJtA" role="_QajBwJ0YEfCOCKuyadxJtA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_nl3goJ6_EfCOCKuyadxJtA" partWithPort="_5tMu4J6-EfCOCKuyadxJtA" role="_Q9Q7AJ0dEfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_pxqp0J6_EfCOCKuyadxJtA" name="Connector15">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_pxrQ4J6_EfCOCKuyadxJtA" partWithPort="_giF74J6_EfCOCKuyadxJtA" role="_h4Kn0J0bEfCOCKuyadxJtA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_pxrQ4Z6_EfCOCKuyadxJtA" partWithPort="_5tMu4J6-EfCOCKuyadxJtA" role="_Y8314J0dEfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="__9lSYJ6_EfCOCKuyadxJtA" name="Connector17">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="__9l5cJ6_EfCOCKuyadxJtA" partWithPort="_WI8MMJ6-EfCOCKuyadxJtA" role="_S7RN8JnqEfCUlb2OTotcLA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="__9l5cZ6_EfCOCKuyadxJtA" partWithPort="_4SZIUJ6_EfCOCKuyadxJtA" role="_j-ZEsJ3wEfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_CpQ1gJ7AEfCOCKuyadxJtA" name="Connector18">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_CpRckJ7AEfCOCKuyadxJtA" partWithPort="_5tMu4J6-EfCOCKuyadxJtA" role="_SoN2YJ0cEfCOCKuyadxJtA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_CpRckZ7AEfCOCKuyadxJtA" partWithPort="_4SZIUJ6_EfCOCKuyadxJtA" role="_dq7ikJ3wEfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_R8HxMJ7kEfCOCKuyadxJtA" name="Connector25">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_R8JmYJ7kEfCOCKuyadxJtA" partWithPort="_sVRAQJ7FEfCOCKuyadxJtA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_MdsRoCTREe-9KvpFZizseA"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_R8JmYZ7kEfCOCKuyadxJtA" partWithPort="__Sk4cJ69EfCOCKuyadxJtA" role="_6Wnz8JPJEfCX89xZkn_KBA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_yCG2MJ7kEfCOCKuyadxJtA" name="Connector28">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_yCHdQJ7kEfCOCKuyadxJtA" partWithPort="_BbQikJ7GEfCOCKuyadxJtA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_aPgaUCcDEe-kO5sLBQPK1Q"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_yCHdQZ7kEfCOCKuyadxJtA" partWithPort="__Sk4cJ69EfCOCKuyadxJtA" role="_hiPKcJ7kEfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_1lEKIJ7lEfCOCKuyadxJtA" name="Connector27">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_1lExMJ7lEfCOCKuyadxJtA" partWithPort="_LpMnIJ7PEfCOCKuyadxJtA">
+            <role xmi:type="uml:Port" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_o2558G6_Ee-JReobqA7-4Q"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_1lFYQJ7lEfCOCKuyadxJtA" partWithPort="__Sk4cJ69EfCOCKuyadxJtA" role="_qWk4cJ7lEfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_E2M6cJ79EfCOCKuyadxJtA" name="Connector29">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_E2NhgJ79EfCOCKuyadxJtA" partWithPort="_r38tIJ78EfCOCKuyadxJtA" role="_y4iQcJ77EfCOCKuyadxJtA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_E2NhgZ79EfCOCKuyadxJtA" partWithPort="_WI8MMJ6-EfCOCKuyadxJtA" role="_S7RN8JnqEfCUlb2OTotcLA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_H1brsJ79EfCOCKuyadxJtA" name="Connector30">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_H1cSwJ79EfCOCKuyadxJtA" partWithPort="_r38tIJ78EfCOCKuyadxJtA" role="_Ux9ecJ77EfCOCKuyadxJtA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_H1cSwZ79EfCOCKuyadxJtA" partWithPort="_5tMu4J6-EfCOCKuyadxJtA" role="_gDJVAJ0dEfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_Mpsr8J79EfCOCKuyadxJtA" name="Connector31">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_MptTAJ79EfCOCKuyadxJtA" partWithPort="_giF74J6_EfCOCKuyadxJtA" role="_h4Kn0J0bEfCOCKuyadxJtA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_MptTAZ79EfCOCKuyadxJtA" partWithPort="_r38tIJ78EfCOCKuyadxJtA" role="_IaQFcJ78EfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_N94QoJ79EfCOCKuyadxJtA" name="Connector32">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_N943sJ79EfCOCKuyadxJtA" partWithPort="_5tMu4J6-EfCOCKuyadxJtA" role="_cbThEJ0cEfCOCKuyadxJtA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_N943sZ79EfCOCKuyadxJtA" partWithPort="_r38tIJ78EfCOCKuyadxJtA" role="_z2788J78EfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_WEr_sJ79EfCOCKuyadxJtA" name="Connector33">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_WEsmwJ79EfCOCKuyadxJtA" partWithPort="_r38tIJ78EfCOCKuyadxJtA" role="_AJ1ucJ78EfCOCKuyadxJtA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_WEsmwZ79EfCOCKuyadxJtA" partWithPort="_Exx2oJ6_EfCOCKuyadxJtA" role="_9g2QgJ0aEfCOCKuyadxJtA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_Wtwx4J79EfCOCKuyadxJtA" name="Connector34">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_WtyAAJ79EfCOCKuyadxJtA" partWithPort="_r38tIJ78EfCOCKuyadxJtA" role="_4XPU0J77EfCOCKuyadxJtA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_WtyAAZ79EfCOCKuyadxJtA" partWithPort="_TAwd0J6_EfCOCKuyadxJtA" role="_QajBwJ0YEfCOCKuyadxJtA"/>
+        </ownedConnector>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_2TmikJnsEfCUlb2OTotcLA" name="EventSystem">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_QajBwJ0YEfCOCKuyadxJtA" name="nearbyEventsData" visibility="public" type="_691dEJnsEfCUlb2OTotcLA" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4HJj0JnsEfCUlb2OTotcLA" name="EventSystem">
+      <generalization xmi:type="uml:Generalization" xmi:id="_WqKtEJ0VEfCOCKuyadxJtA" general="_2TmikJnsEfCUlb2OTotcLA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_x8VrgJ0aEfCOCKuyadxJtA" name="nearbyEventsDataHTTP" visibility="public" type="_OvykoJntEfCUlb2OTotcLA" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_691dEJnsEfCUlb2OTotcLA" name="nearbyEventsData"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_OvykoJntEfCUlb2OTotcLA" name="nearbyEventsDataHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_ShAfUJ0VEfCOCKuyadxJtA" general="_691dEJnsEfCUlb2OTotcLA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_XjAGsJntEfCUlb2OTotcLA" name="IDD_Implementation35">
+      <generalization xmi:type="uml:Generalization" xmi:id="_VwvKsJ0VEfCOCKuyadxJtA" general="_OvykoJntEfCUlb2OTotcLA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ampJsJ0VEfCOCKuyadxJtA" name="TimeSystem">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_9g2QgJ0aEfCOCKuyadxJtA" name="currentTime" visibility="public" type="_gx-qkJ0VEfCOCKuyadxJtA" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eXV0IJ0VEfCOCKuyadxJtA" name="TimeSystem">
+      <generalization xmi:type="uml:Generalization" xmi:id="_ftK-oJ0VEfCOCKuyadxJtA" general="_ampJsJ0VEfCOCKuyadxJtA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_C9sTsJ0bEfCOCKuyadxJtA" name="currentTimeHTTP" visibility="public" type="_lR8OwJ0VEfCOCKuyadxJtA" aggregation="composite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gx-qkJ0VEfCOCKuyadxJtA" name="currentTime"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lR8OwJ0VEfCOCKuyadxJtA" name="currentTimeHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_pMpJwJ0VEfCOCKuyadxJtA" general="_gx-qkJ0VEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nm4F0J0VEfCOCKuyadxJtA" name="IDD_Implementation36">
+      <generalization xmi:type="uml:Generalization" xmi:id="_ot2U8J0VEfCOCKuyadxJtA" general="_lR8OwJ0VEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xdXCwJ0VEfCOCKuyadxJtA" name="WeatherSystem">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_h4Kn0J0bEfCOCKuyadxJtA" name="localWeatherData" visibility="public" type="_0PxgAJ0VEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_t6kCsJ0bEfCOCKuyadxJtA" name="externalWeatherAPI" visibility="public" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_y2gnAJ0VEfCOCKuyadxJtA" name="WeatherSystem">
+      <generalization xmi:type="uml:Generalization" xmi:id="_8UY2sJ0VEfCOCKuyadxJtA" general="_xdXCwJ0VEfCOCKuyadxJtA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_nmMhoJ0bEfCOCKuyadxJtA" name="localWeatherDataHTTP" visibility="public" type="_3xZMoJ0VEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FD7sAKmTEfCWsqOnKaY8XA" name="Property3"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0PxgAJ0VEfCOCKuyadxJtA" name="localWeatherData"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3xZMoJ0VEfCOCKuyadxJtA" name="localWeatherDataHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_73ll8J0VEfCOCKuyadxJtA" general="_0PxgAJ0VEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6lLi4J0VEfCOCKuyadxJtA" name="IDD_Implementation41">
+      <generalization xmi:type="uml:Generalization" xmi:id="_7O-t0J0VEfCOCKuyadxJtA" general="_3xZMoJ0VEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_A5A4cJ0WEfCOCKuyadxJtA" name="DynamicPricingSystem">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_SoN2YJ0cEfCOCKuyadxJtA" name="dynamicPrice" visibility="public" type="_E5GCsJ0WEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_cbThEJ0cEfCOCKuyadxJtA" name="priceLogging" visibility="public" type="_W5qFIJ0WEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_w0fnwJ0cEfCOCKuyadxJtA" name="occupancyData" visibility="public" type="_EtuSwJRbEfCeI66-oErBbA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_53wYAJ0cEfCOCKuyadxJtA" name="currentTime" visibility="public" type="_gx-qkJ0VEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Q9Q7AJ0dEfCOCKuyadxJtA" name="nearbyEventsData" visibility="public" type="_691dEJnsEfCUlb2OTotcLA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Y8314J0dEfCOCKuyadxJtA" name="localWeatherData" visibility="public" type="_0PxgAJ0VEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_gDJVAJ0dEfCOCKuyadxJtA" name="historicalData" visibility="public" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CiSjYJ0WEfCOCKuyadxJtA" name="DynamicPricingSystem">
+      <generalization xmi:type="uml:Generalization" xmi:id="_EFn-YJ0WEfCOCKuyadxJtA" general="_A5A4cJ0WEfCOCKuyadxJtA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_gq6VEJ0cEfCOCKuyadxJtA" name="dynamicPriceHTTP" visibility="public" type="_U-ex4J0WEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_otz0gJ0cEfCOCKuyadxJtA" name="priceLoggingHTTP" visibility="public" type="_Y5UPwJ0WEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_pPSUcJ0dEfCOCKuyadxJtA" name="occupancyDataHTTP" visibility="public" type="_V3MVIJRbEfCeI66-oErBbA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_vRKXUJ0dEfCOCKuyadxJtA" name="currentTimeDataHTTP" visibility="public" type="_lR8OwJ0VEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_z8vVoJ0dEfCOCKuyadxJtA" name="nearbyEventsDataHTTP" visibility="public" type="_OvykoJntEfCUlb2OTotcLA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_5HAbEJ0dEfCOCKuyadxJtA" name="localWeatherDataHTTP" visibility="public" type="_3xZMoJ0VEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="__gVUoJ0dEfCOCKuyadxJtA" name="historicalDataHTTP" visibility="public" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_E5GCsJ0WEfCOCKuyadxJtA" name="dynamicPrice"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_U-ex4J0WEfCOCKuyadxJtA" name="dynamicPriceHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_c-TIIJ0WEfCOCKuyadxJtA" general="_E5GCsJ0WEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_V_QSYJ0WEfCOCKuyadxJtA" name="IDD_Implementation46">
+      <generalization xmi:type="uml:Generalization" xmi:id="_cdC1MJ0WEfCOCKuyadxJtA" general="_U-ex4J0WEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_W5qFIJ0WEfCOCKuyadxJtA" name="priceLogging"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Y5UPwJ0WEfCOCKuyadxJtA" name="priceLoggingHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_dwy8EJ0WEfCOCKuyadxJtA" general="_W5qFIJ0WEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_al3RIJ0WEfCOCKuyadxJtA" name="IDD_Implementation49">
+      <generalization xmi:type="uml:Generalization" xmi:id="_dbs10J0WEfCOCKuyadxJtA" general="_Y5UPwJ0WEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_knSSwJ0WEfCOCKuyadxJtA" name="ClientApp">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_AnEKwJ3wEfCOCKuyadxJtA" name="priceRequest" visibility="public" type="_oTISYJ0WEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_L07KUJ3wEfCOCKuyadxJtA" name="bookingRequest" visibility="public" type="_0y3JgJ0WEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_RW4XAJ3wEfCOCKuyadxJtA" name="availabilityRequest" visibility="public" type="_73yk0J0WEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_V_Bm0J3wEfCOCKuyadxJtA" name="paymentRequest" visibility="public" type="_A2GR4J0XEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_dq7ikJ3wEfCOCKuyadxJtA" name="dynamicPrice" visibility="public" type="_E5GCsJ0WEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_j-ZEsJ3wEfCOCKuyadxJtA" name="occupancyData" visibility="public" type="_EtuSwJRbEfCeI66-oErBbA" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_mmcuIJ0WEfCOCKuyadxJtA" name="ClientApp">
+      <generalization xmi:type="uml:Generalization" xmi:id="_Jibv4J0XEfCOCKuyadxJtA" general="_knSSwJ0WEfCOCKuyadxJtA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_s7il4J3wEfCOCKuyadxJtA" name="priceRequestHTTP" visibility="public" type="_wd8-wJ0WEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_wuSewJ3wEfCOCKuyadxJtA" name="bookingRequestHTTP" visibility="public" type="_4lWjsJ0WEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_8vvecJ3wEfCOCKuyadxJtA" name="availabilityRequestHTTP" visibility="public" type="_-P1aQJ0WEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_H5pLEJ3xEfCOCKuyadxJtA" name="paymentRequestHTTP" visibility="public" type="_DzBWAJ0XEfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_MFan8J3xEfCOCKuyadxJtA" name="dynamicPriceHTTP" visibility="public" type="_U-ex4J0WEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_RF7UcJ3xEfCOCKuyadxJtA" name="occupancyDataHTTP" visibility="public" type="_V3MVIJRbEfCeI66-oErBbA" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oTISYJ0WEfCOCKuyadxJtA" name="priceRequest"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_wd8-wJ0WEfCOCKuyadxJtA" name="priceRequestHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_JFi_kJ0XEfCOCKuyadxJtA" general="_oTISYJ0WEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zyppsJ0WEfCOCKuyadxJtA" name="IDD_Implementation54">
+      <generalization xmi:type="uml:Generalization" xmi:id="_IsC6cJ0XEfCOCKuyadxJtA" general="_wd8-wJ0WEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0y3JgJ0WEfCOCKuyadxJtA" name="bookingRequest"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_4lWjsJ0WEfCOCKuyadxJtA" name="bookingRequestHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_IQtpUJ0XEfCOCKuyadxJtA" general="_0y3JgJ0WEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6WTj8J0WEfCOCKuyadxJtA" name="IDD_Implementation57">
+      <generalization xmi:type="uml:Generalization" xmi:id="_HsaCYJ0XEfCOCKuyadxJtA" general="_4lWjsJ0WEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_73yk0J0WEfCOCKuyadxJtA" name="availabilityRequest"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-P1aQJ0WEfCOCKuyadxJtA" name="availabiltyRequestHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_G7BBsJ0XEfCOCKuyadxJtA" general="_73yk0J0WEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AG7ewJ0XEfCOCKuyadxJtA" name="IDD_Implementation60">
+      <generalization xmi:type="uml:Generalization" xmi:id="_HRqAEJ0XEfCOCKuyadxJtA" general="_-P1aQJ0WEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_A2GR4J0XEfCOCKuyadxJtA" name="paymentRequest"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_DzBWAJ0XEfCOCKuyadxJtA" name="paymentRequestHTTP">
+      <generalization xmi:type="uml:Generalization" xmi:id="_GSheUJ0XEfCOCKuyadxJtA" general="_A2GR4J0XEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FQwfUJ0XEfCOCKuyadxJtA" name="IDD_Implementation63">
+      <generalization xmi:type="uml:Generalization" xmi:id="_F4QkMJ0XEfCOCKuyadxJtA" general="_DzBWAJ0XEfCOCKuyadxJtA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KCMJEJ77EfCOCKuyadxJtA" name="HistoricalDatabase">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Ux9ecJ77EfCOCKuyadxJtA" name="trainingData" visibility="public" type="_N8DWkJ77EfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_y4iQcJ77EfCOCKuyadxJtA" name="occupancyData" visibility="public" type="_EtuSwJRbEfCeI66-oErBbA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_4XPU0J77EfCOCKuyadxJtA" name="nearbyEventsData" visibility="public" type="_691dEJnsEfCUlb2OTotcLA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_AJ1ucJ78EfCOCKuyadxJtA" name="currentTime" visibility="public" type="_gx-qkJ0VEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_IaQFcJ78EfCOCKuyadxJtA" name="localWeatherData" visibility="public" type="_0PxgAJ0VEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_z2788J78EfCOCKuyadxJtA" name="priceLog" visibility="public" type="_W5qFIJ0WEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_y84vgJ78EfCOCKuyadxJtA" name="SysD6"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LzknIJ77EfCOCKuyadxJtA" name="HistoricalDatabase">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_tDOp8J77EfCOCKuyadxJtA" name="trainingDataHTTP" visibility="public" type="_SO7hAJ77EfCOCKuyadxJtA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_QmXLQJ78EfCOCKuyadxJtA" name="occupancyDataHTTP" visibility="public" type="_V3MVIJRbEfCeI66-oErBbA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Vj9GoJ78EfCOCKuyadxJtA" name="nearbyEventsDataHTTP" visibility="public" type="_OvykoJntEfCUlb2OTotcLA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_bfGPYJ78EfCOCKuyadxJtA" name="currentTimeHTTP" visibility="public" type="_lR8OwJ0VEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_h05T0J78EfCOCKuyadxJtA" name="localWeatherDataHTTP" visibility="public" type="_3xZMoJ0VEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_4dyzUJ78EfCOCKuyadxJtA" name="priceLogHTTP" visibility="public" type="_Y5UPwJ0WEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_N8DWkJ77EfCOCKuyadxJtA" name="trainingData"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SO7hAJ77EfCOCKuyadxJtA" name="trainingDataHTTP"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_aapFAI_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aasvYI_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/arrowhead#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Arrowhead_Profile/ArrowheadProfile_v5.0.profile.uml#_sX4gkDIREe6ldMRwfXEyUg"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_acHrsI_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acHrsY_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_acISwI_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acISwY_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_acI50I_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acI50Y_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_acI50o_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acI504_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_acI51I_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acJg4I_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_acJg4Y_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acJg4o_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_acJg44_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acJg5I_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_acJg5Y_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acJg5o_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_acKH8I_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acKH8Y_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_acKH8o_jEfCHJ7DUwa6s9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acKH84_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <ArrowheadDSL:SysD xmi:id="_KaXOgJDDEfCHJ7DUwa6s9Q" base_Class="_KaUyQJDDEfCHJ7DUwa6s9Q"/>
+  <ArrowheadDSL:SD xmi:id="_Gxt_gJPGEfCX89xZkn_KBA" base_Class="_GxqVIJPGEfCX89xZkn_KBA"/>
+  <ArrowheadDSL:IDD xmi:id="_ANMQoJPIEfCX89xZkn_KBA" base_Class="_ANKbcJPIEfCX89xZkn_KBA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_VQz0YJPIEfCX89xZkn_KBA" base_Class="_VQxYIJPIEfCX89xZkn_KBA"/>
+  <ArrowheadDSL:FullPort xmi:id="_zSUgMJPIEfCX89xZkn_KBA" base_Port="_zSRc4JPIEfCX89xZkn_KBA"/>
+  <ArrowheadDSL:FullPort xmi:id="_6WppIJPJEfCX89xZkn_KBA" base_Port="_6Wnz8JPJEfCX89xZkn_KBA"/>
+  <ArrowheadDSL:SysDD xmi:id="_scwPMJPLEfCX89xZkn_KBA" base_Class="_scuaAJPLEfCX89xZkn_KBA"/>
+  <Blocks:Block xmi:id="_9fvUAJRYEfCeI66-oErBbA" base_Class="_9fte0JRYEfCeI66-oErBbA"/>
+  <ArrowheadDSL:SysD xmi:id="_D7pVkJRbEfCeI66-oErBbA" base_Class="_D7ngYJRbEfCeI66-oErBbA"/>
+  <ArrowheadDSL:SD xmi:id="_Etvg4JRbEfCeI66-oErBbA" base_Class="_EtuSwJRbEfCeI66-oErBbA"/>
+  <ArrowheadDSL:SysDD xmi:id="_LH9yUJRbEfCeI66-oErBbA" base_Class="_LH79IJRbEfCeI66-oErBbA"/>
+  <ArrowheadDSL:IDD xmi:id="_V3OKUJRbEfCeI66-oErBbA" base_Class="_V3MVIJRbEfCeI66-oErBbA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_WhLGQJRbEfCeI66-oErBbA" base_Class="_WhJREJRbEfCeI66-oErBbA"/>
+  <ArrowheadDSL:LocalCloudDesign xmi:id="_26Km0JRbEfCeI66-oErBbA" base_Class="_26IKkJRbEfCeI66-oErBbA"/>
+  <ArrowheadDSL:FullPort xmi:id="_S7URQJnqEfCUlb2OTotcLA" base_Port="_S7RN8JnqEfCUlb2OTotcLA"/>
+  <ArrowheadDSL:FullPort xmi:id="_fTPQMJnqEfCUlb2OTotcLA" base_Port="_fTNbAJnqEfCUlb2OTotcLA"/>
+  <ArrowheadDSL:SysD xmi:id="_2ToXwJnsEfCUlb2OTotcLA" base_Class="_2TmikJnsEfCUlb2OTotcLA"/>
+  <ArrowheadDSL:SysDD xmi:id="_4HKx8JnsEfCUlb2OTotcLA" base_Class="_4HJj0JnsEfCUlb2OTotcLA"/>
+  <ArrowheadDSL:SD xmi:id="_693SQJnsEfCUlb2OTotcLA" base_Class="_691dEJnsEfCUlb2OTotcLA"/>
+  <ArrowheadDSL:IDD xmi:id="_OvzywJntEfCUlb2OTotcLA" base_Class="_OvykoJntEfCUlb2OTotcLA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_XjBU0JntEfCUlb2OTotcLA" base_Class="_XjAGsJntEfCUlb2OTotcLA"/>
+  <ArrowheadDSL:SysD xmi:id="_amtbIJ0VEfCOCKuyadxJtA" base_Class="_ampJsJ0VEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SysDD xmi:id="_eXXpUJ0VEfCOCKuyadxJtA" base_Class="_eXV0IJ0VEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SD xmi:id="_gyAfwJ0VEfCOCKuyadxJtA" base_Class="_gx-qkJ0VEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD xmi:id="_lR-D8J0VEfCOCKuyadxJtA" base_Class="_lR8OwJ0VEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_nm57AJ0VEfCOCKuyadxJtA" base_Class="_nm4F0J0VEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SysD xmi:id="_xdY38J0VEfCOCKuyadxJtA" base_Class="_xdXCwJ0VEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SysDD xmi:id="_y2icMJ0VEfCOCKuyadxJtA" base_Class="_y2gnAJ0VEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SD xmi:id="_0PzVMJ0VEfCOCKuyadxJtA" base_Class="_0PxgAJ0VEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD xmi:id="_3xaawJ0VEfCOCKuyadxJtA" base_Class="_3xZMoJ0VEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_6lNYEJ0VEfCOCKuyadxJtA" base_Class="_6lLi4J0VEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SysD xmi:id="_A5DUsJ0WEfCOCKuyadxJtA" base_Class="_A5A4cJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SysDD xmi:id="_CiUYkJ0WEfCOCKuyadxJtA" base_Class="_CiSjYJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SD xmi:id="_E5H34J0WEfCOCKuyadxJtA" base_Class="_E5GCsJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD xmi:id="_U-gnEJ0WEfCOCKuyadxJtA" base_Class="_U-ex4J0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_V_RggJ0WEfCOCKuyadxJtA" base_Class="_V_QSYJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SD xmi:id="_W5r6UJ0WEfCOCKuyadxJtA" base_Class="_W5qFIJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD xmi:id="_Y5WE8J0WEfCOCKuyadxJtA" base_Class="_Y5UPwJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_al5GUJ0WEfCOCKuyadxJtA" base_Class="_al3RIJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SysD xmi:id="_knTg4J0WEfCOCKuyadxJtA" base_Class="_knSSwJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SysDD xmi:id="_mmejUJ0WEfCOCKuyadxJtA" base_Class="_mmcuIJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SD xmi:id="_oTJggJ0WEfCOCKuyadxJtA" base_Class="_oTISYJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD xmi:id="_wd-z8J0WEfCOCKuyadxJtA" base_Class="_wd8-wJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_zyre4J0WEfCOCKuyadxJtA" base_Class="_zyppsJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SD xmi:id="_0y4-sJ0WEfCOCKuyadxJtA" base_Class="_0y3JgJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD xmi:id="_4lYY4J0WEfCOCKuyadxJtA" base_Class="_4lWjsJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_6WVZIJ0WEfCOCKuyadxJtA" base_Class="_6WTj8J0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SD xmi:id="_730aAJ0WEfCOCKuyadxJtA" base_Class="_73yk0J0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD xmi:id="_-P2oYJ0WEfCOCKuyadxJtA" base_Class="_-P1aQJ0WEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_AG8s4J0XEfCOCKuyadxJtA" base_Class="_AG7ewJ0XEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SD xmi:id="_A2HgAJ0XEfCOCKuyadxJtA" base_Class="_A2GR4J0XEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD xmi:id="_DzCkIJ0XEfCOCKuyadxJtA" base_Class="_DzBWAJ0XEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD_Implementation xmi:id="_FQxtcJ0XEfCOCKuyadxJtA" base_Class="_FQwfUJ0XEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_QaleAJ0YEfCOCKuyadxJtA" base_Port="_QajBwJ0YEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_KRP2UJ0aEfCOCKuyadxJtA" base_Port="_KROBIJ0aEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_fwMEIJ0aEfCOCKuyadxJtA" base_Port="_fwKO8J0aEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_x8XgsJ0aEfCOCKuyadxJtA" base_Port="_x8VrgJ0aEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_9g4FsJ0aEfCOCKuyadxJtA" base_Port="_9g2QgJ0aEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_C9th0J0bEfCOCKuyadxJtA" base_Port="_C9sTsJ0bEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_h4MdAJ0bEfCOCKuyadxJtA" base_Port="_h4Kn0J0bEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_nmOW0J0bEfCOCKuyadxJtA" base_Port="_nmMhoJ0bEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_t6lQ0J0bEfCOCKuyadxJtA" base_Port="_t6kCsJ0bEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_SoPrkJ0cEfCOCKuyadxJtA" base_Port="_SoN2YJ0cEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_cbUvMJ0cEfCOCKuyadxJtA" base_Port="_cbThEJ0cEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_gq7jMJ0cEfCOCKuyadxJtA" base_Port="_gq6VEJ0cEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_ot1CoJ0cEfCOCKuyadxJtA" base_Port="_otz0gJ0cEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_w0hc8J0cEfCOCKuyadxJtA" base_Port="_w0fnwJ0cEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_53yNMJ0cEfCOCKuyadxJtA" base_Port="_53wYAJ0cEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_Q9SJIJ0dEfCOCKuyadxJtA" base_Port="_Q9Q7AJ0dEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_Y85EAJ0dEfCOCKuyadxJtA" base_Port="_Y8314J0dEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_gDKjIJ0dEfCOCKuyadxJtA" base_Port="_gDJVAJ0dEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_pPTikJ0dEfCOCKuyadxJtA" base_Port="_pPSUcJ0dEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_vRLlcJ0dEfCOCKuyadxJtA" base_Port="_vRKXUJ0dEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_z8wjwJ0dEfCOCKuyadxJtA" base_Port="_z8vVoJ0dEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_5HCQQJ0dEfCOCKuyadxJtA" base_Port="_5HAbEJ0dEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="__gXJ0J0dEfCOCKuyadxJtA" base_Port="__gVUoJ0dEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_AnF_8J3wEfCOCKuyadxJtA" base_Port="_AnEKwJ3wEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_L08_gJ3wEfCOCKuyadxJtA" base_Port="_L07KUJ3wEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_RW5lIJ3wEfCOCKuyadxJtA" base_Port="_RW4XAJ3wEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_V_DcAJ3wEfCOCKuyadxJtA" base_Port="_V_Bm0J3wEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_dq8wsJ3wEfCOCKuyadxJtA" base_Port="_dq7ikJ3wEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_j-a54J3wEfCOCKuyadxJtA" base_Port="_j-ZEsJ3wEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_s7sW4J3wEfCOCKuyadxJtA" base_Port="_s7il4J3wEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_wuTs4J3wEfCOCKuyadxJtA" base_Port="_wuSewJ3wEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_8vyhwJ3wEfCOCKuyadxJtA" base_Port="_8vvecJ3wEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_H5rAQJ3xEfCOCKuyadxJtA" base_Port="_H5pLEJ3xEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_MFcdIJ3xEfCOCKuyadxJtA" base_Port="_MFan8J3xEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_RF8ikJ3xEfCOCKuyadxJtA" base_Port="_RF7UcJ3xEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_hiUqAJ7kEfCOCKuyadxJtA" base_Port="_hiPKcJ7kEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_qWmtoJ7lEfCOCKuyadxJtA" base_Port="_qWk4cJ7lEfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SysD xmi:id="_KCPzcJ77EfCOCKuyadxJtA" base_Class="_KCMJEJ77EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SysDD xmi:id="_LznDYJ77EfCOCKuyadxJtA" base_Class="_LzknIJ77EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SD xmi:id="_N8Fy0J77EfCOCKuyadxJtA" base_Class="_N8DWkJ77EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:IDD xmi:id="_SO9WMJ77EfCOCKuyadxJtA" base_Class="_SO7hAJ77EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_Ux-skJ77EfCOCKuyadxJtA" base_Port="_Ux9ecJ77EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_tDSUUJ77EfCOCKuyadxJtA" base_Port="_tDOp8J77EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_y4kFoJ77EfCOCKuyadxJtA" base_Port="_y4iQcJ77EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_4XQi8J77EfCOCKuyadxJtA" base_Port="_4XPU0J77EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_AJ3joJ78EfCOCKuyadxJtA" base_Port="_AJ1ucJ78EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_IaR6oJ78EfCOCKuyadxJtA" base_Port="_IaQFcJ78EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_QmZAcJ78EfCOCKuyadxJtA" base_Port="_QmXLQJ78EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_Vj_i4J78EfCOCKuyadxJtA" base_Port="_Vj9GoJ78EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_bfIEkJ78EfCOCKuyadxJtA" base_Port="_bfGPYJ78EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_h06h8J78EfCOCKuyadxJtA" base_Port="_h05T0J78EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:SysD xmi:id="_y86ksJ78EfCOCKuyadxJtA" base_Class="_y84vgJ78EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_z29yIJ78EfCOCKuyadxJtA" base_Port="_z2788J78EfCOCKuyadxJtA"/>
+  <ArrowheadDSL:FullPort xmi:id="_4d0ogJ78EfCOCKuyadxJtA" base_Port="_4dyzUJ78EfCOCKuyadxJtA"/>
+</xmi:XMI>
