@@ -12,7 +12,7 @@
     </packageImport>
     <packagedElement xmi:type="uml:Class" xmi:id="_KaUyQJDDEfCHJ7DUwa6s9Q" name="ParkingSensor">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_zSRc4JPIEfCX89xZkn_KBA" name="sensorData" visibility="public" type="_GxqVIJPGEfCX89xZkn_KBA" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_6Wnz8JPJEfCX89xZkn_KBA" name="serviceDiscovery" visibility="package" aggregation="composite" isConjugated="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_6Wnz8JPJEfCX89xZkn_KBA" name="serviceDiscovery" visibility="public" aggregation="composite" isConjugated="true">
         <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_hiPKcJ7kEfCOCKuyadxJtA" name="serviceOrchestration" visibility="public" aggregation="composite" isConjugated="true">
@@ -209,19 +209,6 @@
       <ownedAttribute xmi:type="uml:Port" xmi:id="_Q9Q7AJ0dEfCOCKuyadxJtA" name="nearbyEventsData" visibility="public" type="_691dEJnsEfCUlb2OTotcLA" aggregation="composite" isConjugated="true"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_Y8314J0dEfCOCKuyadxJtA" name="localWeatherData" visibility="public" type="_0PxgAJ0VEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_gDJVAJ0dEfCOCKuyadxJtA" name="historicalData" visibility="public" aggregation="composite" isConjugated="true"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_xdYCYK2TEfCf49unJlSWGw" name="updateConfig" visibility="public" type="_n64_gK2TEfCf49unJlSWGw" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_--Ef4K2WEfCf49unJlSWGw" name="serviceDiscovery" visibility="public" aggregation="composite">
-        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_6UnzcCTQEe-9KvpFZizseA"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_qRu-QK2XEfCf49unJlSWGw" name="serviceOrchestration" visibility="public" aggregation="composite" isConjugated="true">
-        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_e_uoECcDEe-kO5sLBQPK1Q"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_zTc2YK2XEfCf49unJlSWGw" name="ConsumerAuthentication" visibility="public" aggregation="composite">
-        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_dE6HsDMYEe-MpZcrQa1Yrg"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="__zcMMK2XEfCf49unJlSWGw" name="authorisationToken" visibility="public" aggregation="composite" isConjugated="true">
-        <type xmi:type="uml:Class" href="pathmap://AFPVN_LIB/Arrowhead-5.0.uml#_CbCAEiclEe-kO5sLBQPK1Q"/>
-      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_CiSjYJ0WEfCOCKuyadxJtA" name="DynamicPricingSystem">
       <generalization xmi:type="uml:Generalization" xmi:id="_EFn-YJ0WEfCOCKuyadxJtA" general="_A5A4cJ0WEfCOCKuyadxJtA"/>
@@ -232,7 +219,6 @@
       <ownedAttribute xmi:type="uml:Port" xmi:id="_z8vVoJ0dEfCOCKuyadxJtA" name="nearbyEventsDataHTTP" visibility="public" type="_OvykoJntEfCUlb2OTotcLA" aggregation="composite" isConjugated="true"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_5HAbEJ0dEfCOCKuyadxJtA" name="localWeatherDataHTTP" visibility="public" type="_3xZMoJ0VEfCOCKuyadxJtA" aggregation="composite" isConjugated="true"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="__gVUoJ0dEfCOCKuyadxJtA" name="historicalDataHTTP" visibility="public" aggregation="composite" isConjugated="true"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_31Z7cK2TEfCf49unJlSWGw" name="updateConfigHTTP" visibility="public" type="_rmV9kK2TEfCf49unJlSWGw" aggregation="composite"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_E5GCsJ0WEfCOCKuyadxJtA" name="dynamicPrice"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_U-ex4J0WEfCOCKuyadxJtA" name="dynamicPriceHTTP">
@@ -312,8 +298,6 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_N8DWkJ77EfCOCKuyadxJtA" name="trainingData"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_SO7hAJ77EfCOCKuyadxJtA" name="trainingDataHTTP"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_n64_gK2TEfCf49unJlSWGw" name="updateConfig" visibility="package"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_rmV9kK2TEfCf49unJlSWGw" name="updateConfigHTTP"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_aapFAI_jEfCHJ7DUwa6s9Q">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aasvYI_jEfCHJ7DUwa6s9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/arrowhead#/"/>
@@ -488,12 +472,4 @@
   <ArrowheadDSL:SysD xmi:id="_y86ksJ78EfCOCKuyadxJtA" base_Class="_y84vgJ78EfCOCKuyadxJtA"/>
   <ArrowheadDSL:FullPort xmi:id="_z29yIJ78EfCOCKuyadxJtA" base_Port="_z2788J78EfCOCKuyadxJtA"/>
   <ArrowheadDSL:FullPort xmi:id="_4d0ogJ78EfCOCKuyadxJtA" base_Port="_4dyzUJ78EfCOCKuyadxJtA"/>
-  <ArrowheadDSL:SD xmi:id="_n7IQEK2TEfCf49unJlSWGw" base_Class="_n64_gK2TEfCf49unJlSWGw"/>
-  <ArrowheadDSL:IDD xmi:id="_rmYZ0K2TEfCf49unJlSWGw" base_Class="_rmV9kK2TEfCf49unJlSWGw"/>
-  <ArrowheadDSL:FullPort xmi:id="_xddh8K2TEfCf49unJlSWGw" base_Port="_xdYCYK2TEfCf49unJlSWGw"/>
-  <ArrowheadDSL:FullPort xmi:id="_31bwoK2TEfCf49unJlSWGw" base_Port="_31Z7cK2TEfCf49unJlSWGw"/>
-  <ArrowheadDSL:FullPort xmi:id="_--GVEK2WEfCf49unJlSWGw" base_Port="_--Ef4K2WEfCf49unJlSWGw"/>
-  <ArrowheadDSL:FullPort xmi:id="_qRwzcK2XEfCf49unJlSWGw" base_Port="_qRu-QK2XEfCf49unJlSWGw"/>
-  <ArrowheadDSL:FullPort xmi:id="_zTerkK2XEfCf49unJlSWGw" base_Port="_zTc2YK2XEfCf49unJlSWGw"/>
-  <ArrowheadDSL:FullPort xmi:id="__zeBYK2XEfCf49unJlSWGw" base_Port="__zcMMK2XEfCf49unJlSWGw"/>
 </xmi:XMI>

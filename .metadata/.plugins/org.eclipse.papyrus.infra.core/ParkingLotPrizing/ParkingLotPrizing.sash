@@ -3,7 +3,7 @@
   <di:SashWindowsMngr>
     <sashModel currentSelection="/0/@sashModel/@windows.0/@children.0" restoreActivePage="true">
       <windows>
-        <children xsi:type="di:TabFolder" currentSelection="/0/@sashModel/@windows.0/@children.0/@children.4">
+        <children xsi:type="di:TabFolder" currentSelection="/0/@sashModel/@windows.0/@children.0/@children.5">
           <children>
             <emfPageIdentifier href="platform:/resource/ParkingLotPrizing/ParkingLotPrizing.notation#_aed1EI_jEfCHJ7DUwa6s9Q"/>
           </children>
